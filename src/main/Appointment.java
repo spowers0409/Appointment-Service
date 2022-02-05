@@ -17,27 +17,27 @@ public class Appointment {
 		INITIALIZER = "INITIAL";
 	}
 	
-	Appointment() {
+	public Appointment() {
 		Date today = new Date();
 		appointmentID = INITIALIZER;
 		appointmentDate = today;
 		description = INITIALIZER;
 	}
 	
-	Appointment(String id) {
+	public Appointment(String id) {
 		Date today = new Date();
 		updateAppointmentID(id);
 		appointmentDate = today;
 		description = INITIALIZER;
 	}
 	
-	Appointment(String id, Date date) {
+	public Appointment(String id, Date date) {
 		updateAppointmentID(id);
 		updateDate(date);
 		description = INITIALIZER;
 	}
 	
-	Appointment(String id, Date date, String description) {
+	public Appointment(String id, Date date, String description) {
 		updateAppointmentID(id);
 		updateDate(date);
 		updateDescription(description);
