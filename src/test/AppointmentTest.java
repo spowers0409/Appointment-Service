@@ -15,6 +15,7 @@ public class AppointmentTest {
 	private String longID, longDescription;
 	private Date date, pastDate;
 	
+	// Info bin to add working and non-working info for tests
 	@SuppressWarnings("deprecation")
 	@BeforeEach
 	void infoBin() {
@@ -26,6 +27,7 @@ public class AppointmentTest {
 		pastDate = new Date(0);
 	}
 	
+	// Test for updates to an appointment by ID
 	@Test
 	void testUpdateAppointmentID() {
 		Appointment appointment = new Appointment();
@@ -37,6 +39,7 @@ public class AppointmentTest {
 		assertEquals(ID, appointment.getAppointmentID());
 	}
 	
+	// Test for searching appointments by ID
 	@Test
 	void testGetAppointmentID() {
 		Appointment appointment = new Appointment(ID);
@@ -45,6 +48,7 @@ public class AppointmentTest {
 		assertEquals(ID, appointment.getAppointmentID());
 	}
 	
+	// Test for updates to description
 	@Test
 	void testUpdateDescription() {
 		Appointment appointment = new Appointment();
@@ -56,6 +60,7 @@ public class AppointmentTest {
 		assertEquals(description, appointment.getDescription());
 	}
 	
+	// Test for retrieving descriptions by ID
 	@Test
 	void testGetDescription() {
 		Appointment appointment = new Appointment(ID, date, description);
@@ -64,6 +69,7 @@ public class AppointmentTest {
 		assertEquals(description, appointment.getDescription());
 	}
 	
+	// Test for updates to appointment date
 	@Test
 	void testUpdateDate() {
 		Appointment appointment = new Appointment();
@@ -75,6 +81,7 @@ public class AppointmentTest {
 		assertEquals(date, appointment.getAppointmentDate());
 	}
 	
+	// Test to get the appointment date by ID
 	@Test
 	void testGetAppointmentDate() {
 		Appointment appointment = new Appointment(ID, date);

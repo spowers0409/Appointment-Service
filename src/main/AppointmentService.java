@@ -31,7 +31,7 @@ public class AppointmentService {
 		appointmentList.remove(searchAppointment(ID));
 	}
 	
-	protected List<Appointment> getAppointmentList() { return appointmentList; }
+	public List<Appointment> getAppointmentList() { return appointmentList; }
 	
 	private Appointment searchAppointment(String ID) throws Exception {
 		int index = 0;
